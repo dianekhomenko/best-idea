@@ -1,11 +1,12 @@
-import {Header} from 'components/Header/Header'
+import { Header } from 'components/Header/Header'
+import { Footer } from 'components/Footer/Footer';
 
 export const Layout = ({ children }) => {
     return (
       <>
-        <Header/>
+        <Header />
         <main>{children}</main>
-        <footer></footer>
+        <Footer></Footer>
       </>
     );
 }

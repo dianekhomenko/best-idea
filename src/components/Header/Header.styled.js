@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 0.0625rem 0 #dfe4eb;
+  border-botton: 1px solid black;
   background-color: #fff;
   display: flex;
   padding-left: 20px;
@@ -37,10 +38,26 @@ export const Button = styled.button`
   white-space: nowrap;
   will-change: box-shadow, transform;
   font-size: 18px;
+  gap: 5px;
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
 
   :hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
       rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
     transform: translateY(-2px);
+    svg {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
   }
 `;
