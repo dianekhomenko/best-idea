@@ -11,7 +11,7 @@ export const Header = props => {
       </a>
       <Button>
         <IoMdAddCircleOutline />
-        Add new idea
+        Add idea
       </Button>
     </Container>
   );
