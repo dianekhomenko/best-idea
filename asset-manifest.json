@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/best-idea/static/css/main.99ca3adf.css",
-    "main.js": "/best-idea/static/js/main.9f69494d.js",
+    "main.js": "/best-idea/static/js/main.4ab4f5cf.js",
+    "static/media/logo.png": "/best-idea/static/media/logo.aaa6166c20519024b350.png",
     "index.html": "/best-idea/index.html",
     "main.99ca3adf.css.map": "/best-idea/static/css/main.99ca3adf.css.map",
-    "main.9f69494d.js.map": "/best-idea/static/js/main.9f69494d.js.map"
+    "main.4ab4f5cf.js.map": "/best-idea/static/js/main.4ab4f5cf.js.map"
   },
   "entrypoints": [
     "static/css/main.99ca3adf.css",
-    "static/js/main.9f69494d.js"
+    "static/js/main.4ab4f5cf.js"
   ]
 }
