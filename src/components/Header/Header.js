@@ -6,11 +6,11 @@ export const Header = props => {
   return (
     <Container>
       <a href="/">
-        <img src="events/logo.png" alt="best trip" height="80" width="80" />
+        <img src="events/logo.png" alt="best idea" height="80" width="210" />
       </a>
       <Button>
         <IoMdAddCircleOutline />
-        Add new event
+        Add new idea
       </Button>
     </Container>
   );

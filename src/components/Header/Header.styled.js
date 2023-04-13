@@ -26,17 +26,11 @@ export const Button = styled.button`
   font-family: 'JetBrains Mono', monospace;
   height: 48px;
   justify-content: center;
-  overflow: hidden;
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
   text-align: left;
   transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
   font-size: 18px;
   gap: 5px;
   svg {
