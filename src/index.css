@@ -28,7 +28,6 @@ code {
   position: relative;
   margin: auto;
   width: 100%;
-  max-width: 580px;
   border-radius: 3px;
   overflow: hidden;
 }

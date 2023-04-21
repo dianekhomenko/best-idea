@@ -5,7 +5,7 @@ import { Form as Formik } from 'formik';
 export const Field = styled(FormikField)`
   -webkit-appearance: none;
   appearance: none;
-  width: 550px;
+  width: 100%;
   border: 0;
   font-family: inherit;
   padding: 12px;
@@ -32,4 +32,47 @@ export const Form = styled(Formik)`
   display: flex;
   flex-direction: column;
   gap: 10px;
+`;
+
+export const Button = styled.button`
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'JetBrains Mono', monospace;
+  height: 48px;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  transition: box-shadow 0.15s, transform 0.15s;
+  font-size: 18px;
+  gap: 5px;
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+
+  :hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+    svg {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
 `;

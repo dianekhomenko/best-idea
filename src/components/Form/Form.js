@@ -1,5 +1,5 @@
 import { Formik } from 'formik';
-import { Field, Form } from 'components/Form/Form.styled';
+import { Field, Form, Button } from 'components/Form/Form.styled';
 
 export const IdeaForm = () => {
 
@@ -32,11 +32,25 @@ export const IdeaForm = () => {
           </label>
           <label htmlFor="inp" className="inp">
             <span className="label">Write down your idea...</span>
-            <Field as="textarea" rows="10" name="title" className="input" />
+            <Field
+              as="textarea"
+              rows="10"
+              maxlength="10000"
+              name="description"
+              className="input"
+            />
           </label>
-          <button type="submit" disabled={isSubmitting}>
+          <label>
+            <span className="label">Difficulty</span>
+            <Field as="select" name="difficulty" className="difficulty">
+              <option value="red">Easy</option>
+              <option value="green">Medium</option>
+              <option value="blue">Hard</option>
+            </Field>
+          </label>
+          <Button type="submit" disabled={isSubmitting}>
             Submit
-          </button>
+          </Button>
         </Form>
       )}
     </Formik>
