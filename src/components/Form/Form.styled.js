@@ -5,7 +5,7 @@ import { Form as Formik } from 'formik';
 export const Field = styled(FormikField)`
   -webkit-appearance: none;
   appearance: none;
-  width: 100%;
+  width: 550px;
   border: 0;
   font-family: inherit;
   padding: 12px;
