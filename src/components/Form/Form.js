@@ -1,9 +1,8 @@
 import { Formik } from 'formik';
 import { Field, Form, Button } from 'components/Form/Form.styled';
-import {Thumb} from 'components/Form/Thumb'
+import { Thumb } from 'components/Form/Thumb';
 
 export const IdeaForm = () => {
-
   return (
     <Formik
       initialValues={{ email: '', password: '' }}
@@ -43,18 +42,22 @@ export const IdeaForm = () => {
           </label>
           <label>
             <span className="label">Difficulty</span>
-            <Field as="select" name="difficulty" className="difficulty">
+            <Field as="select" name="difficulty" className="input difficulty">
               <option value="red">Easy</option>
               <option value="green">Medium</option>
               <option value="blue">Hard</option>
             </Field>
           </label>
           <div className="form-group">
-            <label for="file">File upload</label>
+            <label for="images" className="inp label">
+              Images
+            </label>
+
             <input
-              id="file"
-              name="file"
+              id="images"
+              name="images"
               type="file"
+              multiple="multiple"
               onChange={event => {
                 setFieldValue('file', event.currentTarget.files[0]);
               }}

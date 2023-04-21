@@ -24,6 +24,7 @@ export const Header = props => {
         modal={true}
       >
         <div>
+          <h2>Create your idea</h2>
           <IdeaForm />
         </div>
       </Popup>

@@ -25,7 +25,6 @@ code {
 }
 
 .inp {
-  position: relative;
   margin: auto;
   width: 100%;
   border-radius: 3px;
@@ -50,4 +49,20 @@ code {
   font-family: 'Georgia', serif;
   font-size: 14px;
   padding: 15px;
+}
+
+.form-control {
+      
+        padding: 30px;
+        background: rgba(204, 203, 204, 0.45);;
+        border: 2px dashed rgba(186,
+          163,
+          163, 1);
+        text-align: center;
+        transition: background 0.3s ease-in-out;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
