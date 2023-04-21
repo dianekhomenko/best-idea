@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
 import { Field, Form, Button } from 'components/Form/Form.styled';
+import {Thumb} from 'components/Form/Thumb'
 
 export const IdeaForm = () => {
 
@@ -24,7 +25,7 @@ export const IdeaForm = () => {
         }, 400);
       }}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, values, setFieldValue }) => (
         <Form>
           <label htmlFor="inp" className="inp">
             <span className="label">Title</span>
@@ -48,6 +49,20 @@ export const IdeaForm = () => {
               <option value="blue">Hard</option>
             </Field>
           </label>
+          <div className="form-group">
+            <label for="file">File upload</label>
+            <input
+              id="file"
+              name="file"
+              type="file"
+              onChange={event => {
+                setFieldValue('file', event.currentTarget.files[0]);
+              }}
+              className="form-control"
+            />
+            <Thumb file={values.file} />
+          </div>
+
           <Button type="submit" disabled={isSubmitting}>
             Submit
           </Button>
