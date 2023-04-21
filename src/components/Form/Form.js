@@ -5,18 +5,7 @@ import { Thumb } from 'components/Form/Thumb';
 export const IdeaForm = () => {
   return (
     <Formik
-      initialValues={{ email: '', password: '' }}
-      validate={values => {
-        const errors = {};
-        if (!values.email) {
-          errors.email = 'Required';
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = 'Invalid email address';
-        }
-        return errors;
-      }}
+      initialValues={{ title: '', difficulty: '', description: '', images:'', }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
@@ -49,7 +38,7 @@ export const IdeaForm = () => {
             </Field>
           </label>
           <div className="form-group">
-            <label for="images" className="inp label">
+            <label htmlFor="images" className="inp label">
               Images
             </label>
 

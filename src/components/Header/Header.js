@@ -6,6 +6,7 @@ import { IoMdAddCircleOutline } from 'react-icons/io';
 import img from 'logo.png';
 import Popup from 'reactjs-popup';
 import { IdeaForm } from 'components/Form/Form';
+import {AiFillCloseCircle} from 'react-icons/ai'
 
 export const Header = props => {
   return (
@@ -23,10 +24,20 @@ export const Header = props => {
         position="center center"
         modal={true}
       >
-        <div>
-          <h2>Create your idea</h2>
-          <IdeaForm />
-        </div>
+        {close => (
+          <div>
+            <button
+              className="button"
+              onClick={() => {
+                close();
+              }}
+            >
+              <AiFillCloseCircle />
+            </button>
+            <h2>Create your idea</h2>
+            <IdeaForm />
+          </div>
+        )}
       </Popup>
     </Container>
   );
