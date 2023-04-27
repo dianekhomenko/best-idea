@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "draft-js": "^0.11.7",
+    "firebase": "^9.20.0",
     "formik": "^2.2.9",
     "modern-normalize": "^1.1.0",
     "prop-types": "^15.8.1",
@@ -44,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0"
   }
 }
