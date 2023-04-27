@@ -55,3 +55,17 @@ export const Button = styled.button`
     }
   }
 `;
+
+
+export const CloseButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+`;
