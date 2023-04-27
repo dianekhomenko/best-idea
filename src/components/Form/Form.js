@@ -21,15 +21,18 @@ async function addData(values) {
 }
 
 export class IdeaForm extends Component {
-  
   render() {
     return (
       <Formik
-        initialValues={{ title: '', difficulty: '', description: '', images: '' }}
+        initialValues={{
+          title: '',
+          difficulty: '',
+          description: '',
+          images: '',
+        }}
         onSubmit={(values, { setSubmitting }) => {
-
-          console.log(values)
-          addData(values)
+          console.log(values);
+          addData(values);
           setSubmitting(false);
         }}
       >
@@ -83,4 +86,4 @@ export class IdeaForm extends Component {
       </Formik>
     );
   }
-};
+}
