@@ -55,10 +55,13 @@ export const Button = styled.button`
   font-size: 18px;
   gap: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   width: 98%;
   margin: 0 auto;
   margin-bottom: 15px;
 
+=======
+>>>>>>> parent of 2b5b260 (form)
 =======
 >>>>>>> parent of 2b5b260 (form)
   svg {

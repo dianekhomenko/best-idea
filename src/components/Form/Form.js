@@ -26,6 +26,7 @@ export class IdeaForm extends Component {
   render() {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <GoogleReCaptchaProvider
         reCaptchaKey="6Ldd5cIlAAAAAEdDrK5vg8Zt-RRFFv2MlIJu5SPr"
         language="en"
@@ -173,6 +174,63 @@ export class IdeaForm extends Component {
                 Images
               </label>
 
+=======
+      <Formik
+        initialValues={{
+          title: '',
+          difficulty: 'easy',
+          description: '',
+          images: '',
+        }}
+        onSubmit={(values, { setSubmitting }) => {
+          console.log(values);
+          addData(values);
+          setSubmitting(false);
+        }}
+      >
+        {({ isSubmitting, values, setFieldValue }) => (
+          <Form>
+            <label htmlFor="inp" className="inp">
+              <span className="label">Title</span>
+              <Field type="text" name="title" className="input" />
+            </label>
+
+            <label htmlFor="description" className="inp">
+              <span className="label">Write down your idea...</span>
+              <Field
+                as="textarea"
+                rows="10"
+                maxlength="10000"
+                name="description"
+                className="input"
+                onChange={event => {
+                  setFieldValue('description', event.currentTarget.value);
+                }}
+              />
+            </label>
+
+            <label htmlFor="inp">
+              <span className="label">Difficulty</span>
+              <Field
+                as="select"
+                name="difficulty"
+                className="input difficulty"
+                onChange={event => {
+                  setFieldValue('difficulty', event.currentTarget.value);
+                }}
+              >
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </Field>
+            </label>
+
+            <div className="form-group">
+              <label htmlFor="images" className="inp label">
+                Images
+              </label>
+
+>>>>>>> parent of 2b5b260 (form)
               <input
                 id="images"
                 name="images"
@@ -192,6 +250,9 @@ export class IdeaForm extends Component {
           </Form>
         )}
       </Formik>
+<<<<<<< HEAD
+>>>>>>> parent of 2b5b260 (form)
+=======
 >>>>>>> parent of 2b5b260 (form)
     );
   }
