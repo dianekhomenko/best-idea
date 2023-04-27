@@ -26,7 +26,7 @@ export class IdeaForm extends Component {
       <Formik
         initialValues={{
           title: '',
-          difficulty: '',
+          difficulty: 'easy',
           description: '',
           images: '',
         }}
@@ -42,7 +42,8 @@ export class IdeaForm extends Component {
               <span className="label">Title</span>
               <Field type="text" name="title" className="input" />
             </label>
-            <label htmlFor="inp" className="inp">
+
+            <label htmlFor="description" className="inp">
               <span className="label">Write down your idea...</span>
               <Field
                 as="textarea"
@@ -50,16 +51,28 @@ export class IdeaForm extends Component {
                 maxlength="10000"
                 name="description"
                 className="input"
+                onChange={event => {
+                  setFieldValue('description', event.currentTarget.value);
+                }}
               />
             </label>
-            <label>
+
+            <label htmlFor="inp">
               <span className="label">Difficulty</span>
-              <Field as="select" name="difficulty" className="input difficulty">
-                <option value="red">Easy</option>
-                <option value="green">Medium</option>
-                <option value="blue">Hard</option>
+              <Field
+                as="select"
+                name="difficulty"
+                className="input difficulty"
+                onChange={event => {
+                  setFieldValue('difficulty', event.currentTarget.value);
+                }}
+              >
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
               </Field>
             </label>
+
             <div className="form-group">
               <label htmlFor="images" className="inp label">
                 Images
