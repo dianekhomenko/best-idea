@@ -1,8 +1,4 @@
-import {
-  Container,
-  Button,
-  CloseButton,
-} from 'components/Header/Header.styled.js';
+import { Container, Button } from 'components/Header/Header.styled.js';
 import { IoMdAddCircleOutline } from 'react-icons/io';
 import img from 'logo.png';
 import Popup from 'reactjs-popup';
@@ -27,14 +23,14 @@ export const Header = props => {
       >
         {close => (
           <div>
-            <CloseButton
+            <button
               className="button"
               onClick={() => {
                 close();
               }}
             >
               <AiFillCloseCircle />
-            </CloseButton>
+            </button>
             <h2>Create your idea</h2>
             <IdeaForm />
           </div>

@@ -54,6 +54,7 @@ export const Button = styled.button`
       transform: scale(1.2);
     }
   }
+<<<<<<< HEAD
 `;
 
 export const CloseButton = styled.button`
@@ -67,4 +68,6 @@ export const CloseButton = styled.button`
     height: 20px;
     width: 20px;
   }
+=======
+>>>>>>> parent of 2b5b260 (form)
 `;
