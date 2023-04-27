@@ -77,7 +77,6 @@ export const Button = styled.button`
   }
 `;
 
-
 export const FileField = styled.input`
   position: absolute;
   width: 100%;

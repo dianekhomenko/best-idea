@@ -5,7 +5,7 @@ import { Thumb } from 'components/Form/Thumb';
 export const IdeaForm = () => {
   return (
     <Formik
-      initialValues={{ title: '', difficulty: '', description: '', images:'', }}
+      initialValues={{ title: '', difficulty: '', description: '', images: '' }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));

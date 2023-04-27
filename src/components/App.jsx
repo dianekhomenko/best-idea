@@ -1,7 +1,10 @@
 import { Layout } from 'components/Layout/Layout';
+import { Component } from 'react';
 
-export const App = () => {
-  return <Layout>
-    {/* <EventList/> */}
-  </Layout>;
-};
+export class App extends Component() {
+
+  
+  render() {
+    return <Layout>{/* <EventList/> */}</Layout>;
+  }
+}

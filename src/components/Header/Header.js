@@ -1,12 +1,9 @@
-import {
-  Container,
-  Button,
-} from 'components/Header/Header.styled.js';
+import { Container, Button } from 'components/Header/Header.styled.js';
 import { IoMdAddCircleOutline } from 'react-icons/io';
 import img from 'logo.png';
 import Popup from 'reactjs-popup';
 import { IdeaForm } from 'components/Form/Form';
-import {AiFillCloseCircle} from 'react-icons/ai'
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 export const Header = props => {
   return (
