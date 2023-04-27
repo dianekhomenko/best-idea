@@ -16,7 +16,7 @@ async function addData(values) {
     title: values.title,
     difficulty: values.difficulty,
     description: values.description,
-    images: values.images,
+    images: values.file.name,
   });
 }
 
