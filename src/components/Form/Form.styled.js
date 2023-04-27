@@ -56,6 +56,8 @@ export const Button = styled.button`
   gap: 5px;
   width: 98%;
   margin: 0 auto;
+  margin-bottom: 15px;
+
   svg {
     display: inline-block;
     vertical-align: middle;

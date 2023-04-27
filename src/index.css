@@ -20,8 +20,8 @@ code {
   background: #FFFFFF;
   border-radius: 10px;
   width: 681px;
-  padding: 15px 25px;
-  max-height: 625px;
+  padding: 10px 25px;
+  max-height: 650px;
   overflow: scroll;
 }
 
@@ -31,4 +31,15 @@ code {
   font-family: 'Georgia', serif;
   font-size: 14px;
   padding: 15px;
+}
+
+.submit-group {
+  display: flex;
+
+}
+
+#captcha {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
 }
