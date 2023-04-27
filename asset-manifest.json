@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/best-idea/static/css/main.2c2e5076.css",
-    "main.js": "/best-idea/static/js/main.b8960462.js",
+    "main.css": "/best-idea/static/css/main.396fbc0f.css",
+    "main.js": "/best-idea/static/js/main.931646e0.js",
     "static/media/logo.png": "/best-idea/static/media/logo.aaa6166c20519024b350.png",
     "index.html": "/best-idea/index.html",
-    "main.2c2e5076.css.map": "/best-idea/static/css/main.2c2e5076.css.map",
-    "main.b8960462.js.map": "/best-idea/static/js/main.b8960462.js.map"
+    "main.396fbc0f.css.map": "/best-idea/static/css/main.396fbc0f.css.map",
+    "main.931646e0.js.map": "/best-idea/static/js/main.931646e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c2e5076.css",
-    "static/js/main.b8960462.js"
+    "static/css/main.396fbc0f.css",
+    "static/js/main.931646e0.js"
   ]
 }
