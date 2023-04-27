@@ -19,28 +19,12 @@ code {
 
 .popup-content {
   background: #FFFFFF;
-  border-radius: 40px;
+  border-radius: 10px;
   width: 681px;
   padding: 40px;
-}
-
-.inp {
-  margin: auto;
-  width: 100%;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.label {
-  left: 12px;
-  font-size: 16px;
-  color: #7D7C7D;
-  font-weight: 500;
-  pointer-events: none;
-}
-
-.descriptionInput {
-  height: 300px;
+  padding: 15px 25px;
+  max-height: 625px;
+  overflow: scroll;
 }
 
 .RichEditor-root {
@@ -49,33 +33,4 @@ code {
   font-family: 'Georgia', serif;
   font-size: 14px;
   padding: 15px;
-}
-
-.form-control {
-      
-        padding: 30px;
-        background: rgba(204, 203, 204, 0.45);;
-        border: 2px dashed rgba(186,
-          163,
-          163, 1);
-        text-align: center;
-        transition: background 0.3s ease-in-out;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  margin-left: auto;
-}
-
-.button svg {
-    height: 20px;
-      width: 20px;
 }

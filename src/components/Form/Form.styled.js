@@ -5,7 +5,7 @@ import { Form as Formik } from 'formik';
 export const Field = styled(FormikField)`
   -webkit-appearance: none;
   appearance: none;
-  width: 100%;
+  width: 98%;
   border: 0;
   font-family: inherit;
   padding: 12px;
@@ -54,16 +54,10 @@ export const Button = styled.button`
   transition: box-shadow 0.15s, transform 0.15s;
   font-size: 18px;
   gap: 5px;
-<<<<<<< HEAD
-<<<<<<< HEAD
   width: 98%;
   margin: 0 auto;
   margin-bottom: 15px;
 
-=======
->>>>>>> parent of 2b5b260 (form)
-=======
->>>>>>> parent of 2b5b260 (form)
   svg {
     display: inline-block;
     vertical-align: middle;
@@ -99,3 +93,40 @@ export const FileField = styled.input`
   cursor: pointer;
 `;
 
+export const Label = styled.label`
+  margin: auto;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  font-size: 16px;
+  color: #7d7c7d;
+  font-weight: 500;
+`;
+
+export const FormTitle = styled.span`
+  left: 12px;
+  font-size: 16px;
+  color: #7d7c7d;
+  font-weight: 500;
+  pointer-events: none;
+`;
+
+export const ScrollComponent = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+`;
+
+export const FilesGroup = styled.div`
+  padding: 30px;
+  background: rgba(204, 203, 204, 0.45);
+  border: 2px dashed rgba(186, 163, 163, 1);
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  display: flex;
+
+  img {
+    max-height: 100px;
+    width: auto;
+  }
+  `

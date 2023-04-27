@@ -6,7 +6,7 @@ export class Thumb extends Component {
     thumb: undefined,
   };
 
-  componentDidUpdate(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (!nextProps.file) {
       return;
     }
