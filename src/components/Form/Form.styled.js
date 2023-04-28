@@ -134,7 +134,7 @@ export const FilesGroup = styled.div`
     max-height: 100px;
     width: auto;
   }
-  `
+`;
 
 export const Notification = styled.div`
   text-align: center;

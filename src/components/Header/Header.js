@@ -9,9 +9,7 @@ import Popup from 'reactjs-popup';
 import { IdeaForm } from 'components/Form/Form';
 import { AiFillCloseCircle } from 'react-icons/ai';
 
-
 export const Header = props => {
-  
   return (
     <Container>
       <a href="/">
@@ -37,7 +35,7 @@ export const Header = props => {
             >
               <AiFillCloseCircle />
             </CloseButton>
-            
+
             <IdeaForm />
           </div>
         )}

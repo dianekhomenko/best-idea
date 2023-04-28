@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   justify-content: space-around;
@@ -68,5 +68,4 @@ export const CloseButton = styled.button`
     height: 20px;
     width: 20px;
   }
-
 `;

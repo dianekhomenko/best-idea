@@ -47,11 +47,11 @@ export const ClearButton = styled.button`
 `;
 
 export const SideBar = styled.div`
-display: flex;
-flex-direction: column;
-gap: 10px;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
 export const Banner = styled.img`
-width: 300px;
-`
+  width: 300px;
+`;

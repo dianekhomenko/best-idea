@@ -11,14 +11,11 @@ import {
   TitleForm,
 } from 'components/Form/Form.styled';
 import { Thumb } from 'components/Form/Thumb';
-
 import uniqid from 'uniqid';
-
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { firebaseConfig } from 'components/api';
-
 import { useState } from 'react';
 
 const app = initializeApp(firebaseConfig);
