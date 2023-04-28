@@ -1,4 +1,3 @@
-import { Component } from "react";
 import {
   SearchBar,
   SearchInput,
@@ -6,12 +5,7 @@ import {
   SearchButton,
 } from 'components/Search/Search.styled';
 
-export class Search extends Component {
-    state = {
-        search: '',
-    }
-
-    render() {
+export const Search = ({ideas}) => {
         return (
           <SearchBar>
             <SearchInput
@@ -25,4 +19,3 @@ export class Search extends Component {
           </SearchBar>
         );
     }
-}
