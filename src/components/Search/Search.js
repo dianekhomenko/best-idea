@@ -14,7 +14,11 @@ export class Search extends Component {
     render() {
         return (
           <SearchBar>
-            <SearchInput />
+            <SearchInput
+              placeholder="Search ideas"
+              name="searchbar"
+              type="text"
+            />
             <SearchButton>
               <SearchIcon />
             </SearchButton>

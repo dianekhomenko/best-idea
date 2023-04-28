@@ -7,8 +7,8 @@ export const Container = styled.div`
   padding-bottom: 10px;
   background-color: rgb(247 247 247);
   display: flex;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   gap: 10px;
+  position: fixed;
+  bottom: 0;
 `;

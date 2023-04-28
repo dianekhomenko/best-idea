@@ -4,4 +4,6 @@ export const Container = styled.main`
   padding: 40px;
   display: flex;
   width: 1200px;
+  margin: 0 auto;
+  overflow: scroll;
 `;
