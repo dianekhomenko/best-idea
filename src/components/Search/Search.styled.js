@@ -7,7 +7,7 @@ export const SearchBar = styled.form`
 `;
 
 export const SearchInput = styled.input`
-  width: 300px;
+  width: 280px;
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(201, 200, 200, 0.25);
   border-radius: 5px;
@@ -30,6 +30,7 @@ export const SearchButton = styled.button`
   cursor: pointer;
   justify-self: end;
   margin-top: 10px;
+  margin-right: 10px;
 `;
 
 export const ClearButton = styled.button`
@@ -48,5 +49,9 @@ export const ClearButton = styled.button`
 export const SideBar = styled.div`
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 10px;
+`
+
+export const Banner = styled.img`
+width: 300px;
 `
