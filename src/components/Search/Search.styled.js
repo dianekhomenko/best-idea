@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { BsSearchHeartFill as Icon } from 'react-icons/bs';
 
 export const SearchBar = styled.form`
-  width: 250px;
+  width: 300px;
   display: grid;
 `;
 
 export const SearchInput = styled.input`
-  width: 250px;
+  width: 300px;
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(201, 200, 200, 0.25);
   border-radius: 5px;
