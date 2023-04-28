@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/best-idea/static/css/main.96c34368.css",
-    "main.js": "/best-idea/static/js/main.dfa4e6ed.js",
+    "main.js": "/best-idea/static/js/main.3f4bdda4.js",
     "static/media/banner.png": "/best-idea/static/media/banner.11e7f98eaed3b8b7be18.png",
     "static/media/logo.png": "/best-idea/static/media/logo.aaa6166c20519024b350.png",
     "index.html": "/best-idea/index.html",
     "main.96c34368.css.map": "/best-idea/static/css/main.96c34368.css.map",
-    "main.dfa4e6ed.js.map": "/best-idea/static/js/main.dfa4e6ed.js.map"
+    "main.3f4bdda4.js.map": "/best-idea/static/js/main.3f4bdda4.js.map"
   },
   "entrypoints": [
     "static/css/main.96c34368.css",
-    "static/js/main.dfa4e6ed.js"
+    "static/js/main.3f4bdda4.js"
   ]
 }
