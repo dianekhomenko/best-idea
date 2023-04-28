@@ -72,7 +72,6 @@ export const IdeaForm = ({ submit }) => {
           file: '',
         }}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
           addData(values);
           setSubmitting(false);
           closeModal();

@@ -51,7 +51,6 @@ export class App extends Component {
   };
 
   onClear = () => {
-    console.log('clear');
     refreshPage();
   };
 
