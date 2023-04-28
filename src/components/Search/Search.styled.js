@@ -31,3 +31,22 @@ export const SearchButton = styled.button`
   justify-self: end;
   margin-top: 10px;
 `;
+
+export const ClearButton = styled.button`
+  heigth: 10px;
+  width: 100%;
+  background: none;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+`;
+
+export const SideBar = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+`

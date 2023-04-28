@@ -4,12 +4,10 @@ import { IdeasList } from './IdeasList/IdeasList';
 import { Search } from 'components/Search/Search';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-
 import { firebaseConfig } from 'components/api.js';
 import { collection, getDocs } from 'firebase/firestore';
 
 const app = initializeApp(firebaseConfig);
-
 const db = getFirestore(app);
 
 export class App extends Component {
@@ -33,12 +31,6 @@ export class App extends Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.search !== this.state.search) {
-      console.log('search');
-    }
-  }
-
   onSearch = e => {
     e.preventDefault();
     let searchText = e.currentTarget.elements.searchbar.value;
@@ -51,15 +43,25 @@ export class App extends Component {
     );
     this.setState({
       ideas: filteredIdeas,
-      search: '',
     });
+  };
+
+  onClear = () => {
+    console.log('clear');
+    
   };
 
   render() {
     return (
       <Layout>
         <IdeasList ideas={this.state.ideas} />
-        <Search onSubmit={this.onSearch} />
+        <>
+          <Search
+            onSubmit={this.onSearch}
+            search={this.state.search}
+            clearSearch={this.onClear}
+          />
+        </>
       </Layout>
     );
   }
