@@ -15,22 +15,32 @@ export class IdeasList extends Component {
     ideas: [],
   };
 
-  async componentDidMount() {
-    console.log('read');
+  async componentDidMount(prevProps, prevState) {
+    if (prevState !== this.state.ideas) {
+      const querySnapshot = await getDocs(collection(db, 'ideas'));
 
-    const querySnapshot = await getDocs(collection(db, 'ideas'));
-
-    querySnapshot.forEach(doc => {
-      let data = doc.data();
-      this.setState(prevState => {
+      querySnapshot.forEach(doc => {
+        let data = doc.data();
+        this.setState(prevState => {
           return {
-              ideas: [...prevState.ideas, data]
+            ideas: [...prevState.ideas, data],
           };
+        });
       });
-    });
+    }
   }
 
   render() {
-    return <></>;
+    return (
+      <>
+        {/* {this.ideas.map(idea => (
+            <Idea
+              key={photo.id}
+              smallImage={photo.webformatURL}
+              bigImage={photo.largeImageURL}
+            />
+          ))} */}
+      </>
+    );
   }
 }
