@@ -138,4 +138,12 @@ export const FilesGroup = styled.div`
 
 export const Notification = styled.div`
   text-align: center;
+
+  h3 {
+    margin-top: 25px;
+  }
+`;
+
+export const TitleForm = styled.h2`
+  margin-top: 10px;
 `;

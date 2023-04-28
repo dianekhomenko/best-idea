@@ -8,6 +8,7 @@ import {
   ScrollComponent,
   FilesGroup,
   Notification,
+  TitleForm,
 } from 'components/Form/Form.styled';
 import { Thumb } from 'components/Form/Thumb';
 
@@ -25,8 +26,13 @@ function sentModal() {
   console.log('sent')
   return (
     <Notification>
-      We will add the idea
-      <br /> to this app after moderation
+      <>
+        <h3>Thank you for your idea!</h3>
+        <p>
+          We will add the idea
+          <br /> to this app after moderation
+        </p>
+      </>
     </Notification>
   );
 }
@@ -75,7 +81,7 @@ export const IdeaForm = ({submit}) => {
         >
           {({ isSubmitting, values, setFieldValue }) => (
             <Form>
-              <h2>Create your idea</h2>
+              <TitleForm>Create your idea</TitleForm>
               <Label htmlFor="inp">
                 <FormTitle>Title</FormTitle>
                 <Field type="text" name="title" validate={validateRequired} />

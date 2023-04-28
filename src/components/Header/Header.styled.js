@@ -62,6 +62,7 @@ export const CloseButton = styled.button`
   cursor: pointer;
   position: absolute;
   right: 15px;
+  top: 15px;
 
   svg {
     height: 20px;
