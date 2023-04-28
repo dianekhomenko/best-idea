@@ -15,19 +15,17 @@ export class IdeasList extends Component {
     ideas: [],
   };
 
-  async componentDidMount(prevProps, prevState) {
-    if (prevState !== this.state.ideas) {
-      const querySnapshot = await getDocs(collection(db, 'ideas'));
+  async componentDidMount() {
+    const querySnapshot = await getDocs(collection(db, 'ideas'));
 
-      querySnapshot.forEach(doc => {
-        let data = doc.data();
-        this.setState(prevState => {
-          return {
-            ideas: [...prevState.ideas, data],
-          };
-        });
+    querySnapshot.forEach(doc => {
+      let data = doc.data();
+      this.setState(prevState => {
+        return {
+          ideas: [...prevState.ideas, data],
+        };
       });
-    }
+    });
   }
 
   render() {
