@@ -7,18 +7,29 @@ import {
   FormTitle,
   ScrollComponent,
   FilesGroup,
+  Notification,
 } from 'components/Form/Form.styled';
 import { Thumb } from 'components/Form/Thumb';
-import { Component } from 'react';
 
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { firebaseConfig } from 'components/api';
 
+import { useState } from 'react';
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+function sentModal() {
+  console.log('sent')
+  return (
+    <Notification>
+      We will add the idea
+      <br /> to this app after moderation
+    </Notification>
+  );
+}
 
 async function addData(values) {
   await addDoc(collection(db, 'ideas'), {
@@ -37,8 +48,15 @@ function validateRequired(value) {
   return error;
 }
 
-export class IdeaForm extends Component {
-  render() {
+export const IdeaForm = ({submit}) => {
+
+    const [open, setOpen] = useState(true);
+    const closeModal = () => setOpen(false);
+  
+  if (!open) {
+      return sentModal();
+  }
+  
     return (
       <ScrollComponent>
         <Formik
@@ -52,10 +70,12 @@ export class IdeaForm extends Component {
             console.log(values);
             addData(values);
             setSubmitting(false);
+            closeModal();
           }}
         >
           {({ isSubmitting, values, setFieldValue }) => (
             <Form>
+              <h2>Create your idea</h2>
               <Label htmlFor="inp">
                 <FormTitle>Title</FormTitle>
                 <Field type="text" name="title" validate={validateRequired} />
@@ -110,4 +130,3 @@ export class IdeaForm extends Component {
       </ScrollComponent>
     );
   }
-}

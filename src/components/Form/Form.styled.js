@@ -32,6 +32,11 @@ export const Form = styled(Formik)`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
+
+  @media (min-width: 751px) {
+    width: 700px;
+  }
 `;
 
 export const Button = styled.button`
@@ -130,3 +135,7 @@ export const FilesGroup = styled.div`
     width: auto;
   }
   `
+
+export const Notification = styled.div`
+  text-align: center;
+`;

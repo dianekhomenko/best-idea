@@ -20,11 +20,12 @@ code {
 .popup-content {
   background: #FFFFFF;
   border-radius: 10px;
-  width: 681px;
+  width: max-content;
   padding: 40px;
   padding: 15px 25px;
   max-height: 625px;
   overflow: scroll;
+  min-width: 300px;
 }
 
 .RichEditor-root {

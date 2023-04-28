@@ -5,7 +5,6 @@ export const Footer = (props) => {
     return (
       <Container>
         <AiOutlineCopyrightCircle /> All rights reserved 2023
-        <div id="captcha"></div>
       </Container>
     );
 }
