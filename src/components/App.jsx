@@ -10,6 +10,10 @@ import { collection, getDocs } from 'firebase/firestore';
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+function refreshPage () {
+   window.location.reload(false);
+ };
+
 export class App extends Component {
   state = {
     ideas: [],
@@ -48,7 +52,7 @@ export class App extends Component {
 
   onClear = () => {
     console.log('clear');
-    
+    refreshPage();
   };
 
   render() {
