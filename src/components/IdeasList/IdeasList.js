@@ -5,6 +5,8 @@ import { getFirestore } from 'firebase/firestore';
 
 import { firebaseConfig } from 'components/api.js';
 import { collection, getDocs } from 'firebase/firestore';
+import { Idea } from 'components/Idea/Idea';
+import {List} from 'components/IdeasList/IdeasList.styled'
 
 const app = initializeApp(firebaseConfig);
 
@@ -30,15 +32,17 @@ export class IdeasList extends Component {
 
   render() {
     return (
-      <>
-        {/* {this.ideas.map(idea => (
-            <Idea
-              key={photo.id}
-              smallImage={photo.webformatURL}
-              bigImage={photo.largeImageURL}
-            />
-          ))} */}
-      </>
+      <List>
+        {this.state.ideas.map(idea => (
+          <Idea
+            key={idea.id}
+            title={idea.title}
+            difficulty={idea.difficulty}
+            description={idea.description}
+            images={idea.images}
+          />
+        ))}
+      </List>
     );
   }
 }

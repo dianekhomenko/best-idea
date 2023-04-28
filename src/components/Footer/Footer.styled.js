@@ -7,8 +7,6 @@ export const Container = styled.div`
   padding-bottom: 10px;
   background-color: rgb(247 247 247);
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
   position: absolute;
   bottom: 0;
   width: 100%;
