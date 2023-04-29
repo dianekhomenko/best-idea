@@ -11,7 +11,7 @@ import {
 import { MdOutlineClear } from 'react-icons/md';
 import banner from 'upload/banner.png';
 
-export const Search = ({ onSubmit, search, clearSearch }) => {
+export const Search = ({ onSubmit, filter, clearSearch }) => {
   return (
     <SideBar>
       <SearchBlock>
@@ -25,11 +25,11 @@ export const Search = ({ onSubmit, search, clearSearch }) => {
             <SearchIcon />
           </SearchButton>
         </SearchBar>
-        {search !== '' && (
+        {(filter.length) ? (
           <ClearButton onClick={clearSearch}>
             <MdOutlineClear /> Clear search
           </ClearButton>
-        )}
+        ) : 'Nothing found'}
       </SearchBlock>
       <Banner src={banner} alt="Fing new ideas" />
     </SideBar>

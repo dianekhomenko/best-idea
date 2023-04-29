@@ -62,7 +62,7 @@ export class App extends Component {
         <>
           <Search
             onSubmit={this.onSearch}
-            search={this.state.search}
+            filter={this.state.filter}
             clearSearch={this.onClear}
           />
         </>
