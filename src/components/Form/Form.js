@@ -63,7 +63,7 @@ export const IdeaForm = ({ submit }) => {
   }
 
   async function saveFile(file) {
-    console.log('sent', file);
+    console.log(file);
     let formData = new FormData();
     formData.set('file', file);
 
