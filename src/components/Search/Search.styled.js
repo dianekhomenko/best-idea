@@ -13,14 +13,14 @@ export const SearchInput = styled.input`
   box-shadow: 0px 4px 4px rgba(201, 200, 200, 0.25);
   border-radius: 5px;
   border: none;
-  padding: 15px 0 15px 20px;
+  padding: 15px 0 15px 40px;
   height: 20px;
   font-family: 'JetBrains Mono', monospace;
 `;
 
 export const SearchIcon = styled(Icon)`
-  width: 20px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   fill: #5f0606;
 `;
 
@@ -28,11 +28,10 @@ export const SearchButton = styled.button`
   position: absolute;
   background: none;
   border: none;
-  height: 20px;
+  height: 30px;
   cursor: pointer;
-  justify-self: end;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin: 13px 10px 0 10px;
+  padding: 0;
 `;
 
 export const ClearButton = styled.button`
