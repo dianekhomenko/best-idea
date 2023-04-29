@@ -62,8 +62,16 @@ export const IdeaForm = ({ submit }) => {
     return sentModal();
   }
 
-  function saveFile( file ) {
-    console.log('sent', file)
+  async function saveFile(file) {
+    console.log('sent', file);
+    let formData = new FormData();
+    formData.set('file', file);
+
+    formData.append('file', file);
+    await fetch('components/upload', {
+      method: 'POST',
+      body: formData,
+    });
   }
 
   return (
