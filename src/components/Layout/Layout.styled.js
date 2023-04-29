@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  padding: 40px;
+  padding: 20px 10px;
   display: flex;
-  width: 375px;
+  width: 300px;
   margin: 0 auto;
-  overflow: scroll;
   flex-direction: column-reverse;
 
+  @media screen and (min-width: 375) {
+    width: 350px;
+  }
+
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: 430px;
   }
 
   @media screen and (min-width: 768px) {

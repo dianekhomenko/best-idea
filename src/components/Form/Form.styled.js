@@ -32,7 +32,13 @@ export const Form = styled(Formik)`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
+  width: 290px;
+  padding: 15px;
+
+  @media (min-width: 375px) {
+    width: 350px;
+    padding: 15px 20px;
+  }
 
   @media (min-width: 751px) {
     width: 700px;

@@ -1,5 +1,11 @@
 @import-normalize;
-/* bring in normalize.css styles */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: local("JetBrains Mono"),
+    url("./fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: regular;
+}
 
 body {
   margin: 0;
@@ -28,11 +34,9 @@ code {
   background: #FFFFFF;
   border-radius: 10px;
   width: max-content;
-  padding: 40px;
-  padding: 15px 25px;
-  max-height: 625px;
+  max-height: 700px;
   overflow: scroll;
-  min-width: 300px;
+  min-width: 180px;
 }
 
 .RichEditor-root {

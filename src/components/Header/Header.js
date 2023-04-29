@@ -12,7 +12,7 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 export const Header = props => {
   return (
     <Container>
-      <a href="/">
+      <a href="/best-idea">
         <img src={img} alt="best idea" height="80" width="210" />
       </a>
       <Popup

@@ -2,18 +2,20 @@ import styled from 'styled-components';
 import { BsSearchHeartFill as Icon } from 'react-icons/bs';
 
 export const SearchBar = styled.form`
-  width: 300px;
+  width: -webkit-fill-available;
   display: grid;
+  margin-bottom: 10px;
 `;
 
 export const SearchInput = styled.input`
-  width: 280px;
+  width: -webkit-fill-available;
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(201, 200, 200, 0.25);
   border-radius: 5px;
   border: none;
   padding: 15px 0 15px 20px;
   height: 20px;
+  font-family: 'JetBrains Mono', monospace;
 `;
 
 export const SearchIcon = styled(Icon)`
@@ -49,9 +51,17 @@ export const ClearButton = styled.button`
 export const SideBar = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
 `;
 
 export const Banner = styled.img`
   width: 300px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `;
+
+export const SearchBlock = styled.div`
+margin-bottom: 10px;
+`
