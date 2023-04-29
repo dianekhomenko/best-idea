@@ -62,6 +62,10 @@ export const IdeaForm = ({ submit }) => {
     return sentModal();
   }
 
+  function saveFile( file ) {
+    console.log('sent', file)
+  }
+
   return (
     <ScrollComponent>
       <Formik
@@ -75,6 +79,7 @@ export const IdeaForm = ({ submit }) => {
           addData(values);
           setSubmitting(false);
           closeModal();
+          saveFile(values.file);
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (

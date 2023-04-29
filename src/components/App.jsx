@@ -64,6 +64,7 @@ export class App extends Component {
             onSubmit={this.onSearch}
             filter={this.state.filter}
             clearSearch={this.onClear}
+            search={this.state.search}
           />
         </>
       </Layout>
