@@ -17,6 +17,7 @@ function refreshPage () {
 export class App extends Component {
   state = {
     ideas: [],
+    filter: [],
     search: '',
   };
 
@@ -46,7 +47,7 @@ export class App extends Component {
       idea.title.includes(searchText)
     );
     this.setState({
-      ideas: filteredIdeas,
+      filter: filteredIdeas,
     });
   };
 
@@ -57,7 +58,7 @@ export class App extends Component {
   render() {
     return (
       <Layout>
-        <IdeasList ideas={this.state.ideas} />
+        <IdeasList ideas={this.state.ideas} filter={this.state.filter} />
         <>
           <Search
             onSubmit={this.onSearch}
