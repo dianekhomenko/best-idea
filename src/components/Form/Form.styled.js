@@ -144,6 +144,7 @@ export const FilesGroup = styled.div`
 
 export const Notification = styled.div`
   text-align: center;
+  padding: 15px 15px 0 15px;
 
   h3 {
     margin-top: 25px;
@@ -153,3 +154,4 @@ export const Notification = styled.div`
 export const TitleForm = styled.h2`
   margin-top: 10px;
 `;
+
