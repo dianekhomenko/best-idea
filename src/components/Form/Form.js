@@ -41,7 +41,6 @@ async function convertToBase64(file) {
     const srcData = fileReader.result;
     console.log('scrData: ', srcData);
   };
-  console.log(fileReader.readAsDataURL(file))
   fileReader.readAsDataURL(file);
 }
 
