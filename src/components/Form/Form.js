@@ -22,7 +22,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function sentModal() {
-  console.log('sent');
   return (
     <Notification>
       <>
@@ -36,12 +35,24 @@ function sentModal() {
   );
 }
 
+async function convertToBase64(file) {
+  const fileReader = new FileReader();
+  fileReader.onload = () => {
+    const srcData = fileReader.result;
+    console.log('scrData: ', srcData);
+  };
+  console.log(fileReader.readAsDataURL(file))
+  fileReader.readAsDataURL(file);
+}
+
 async function addData(values) {
+  const converted = await convertToBase64(values.file);
+  console.log(converted);
   await addDoc(collection(db, 'ideas'), {
     title: values.title,
     difficulty: values.difficulty,
     description: values.description,
-    images: values.file.name || '',
+    images: converted,
     id: uniqid(),
   });
 }
@@ -62,18 +73,6 @@ export const IdeaForm = ({ submit }) => {
     return sentModal();
   }
 
-  async function saveFile(file) {
-    console.log(file);
-    let formData = new FormData();
-    formData.set('file', file);
-
-    formData.append('file', file);
-    await fetch('components/upload', {
-      method: 'POST',
-      body: formData,
-    });
-  }
-
   return (
     <ScrollComponent>
       <Formik
@@ -87,7 +86,6 @@ export const IdeaForm = ({ submit }) => {
           addData(values);
           setSubmitting(false);
           closeModal();
-          saveFile(values.file);
         }}
       >
         {({ isSubmitting, values, setFieldValue }) => (

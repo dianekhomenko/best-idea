@@ -154,4 +154,3 @@ export const Notification = styled.div`
 export const TitleForm = styled.h2`
   margin-top: 10px;
 `;
-
