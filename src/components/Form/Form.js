@@ -36,17 +36,18 @@ function sentModal() {
 }
 
 async function convertToBase64(file) {
-  const fileReader = new FileReader();
-  fileReader.onload = () => {
-    const srcData = fileReader.result;
-    console.log('scrData: ', srcData);
-  };
-  fileReader.readAsDataURL(file);
+  return new Promise(resolve => {
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      const srcData = fileReader.result;
+      resolve(srcData);
+    };
+    fileReader.readAsDataURL(file);
+  });
 }
 
 async function addData(values) {
   const converted = await convertToBase64(values.file);
-  console.log(converted);
   await addDoc(collection(db, 'ideas'), {
     title: values.title,
     difficulty: values.difficulty,
